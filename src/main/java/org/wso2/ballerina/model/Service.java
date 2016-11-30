@@ -22,11 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  A service is an HTTP web service described by a Swagger.
- *  A service is the discrete unit of functionality that can be remotely accessed.
+ *  A Service is an HTTP web service described by a Swagger.
+ *  A Service is the discrete unit of functionality that can be remotely accessed.
  *  <p>
  *
- *  A service is defined as follows:
+ *  A Service is defined as follows:
  *
  *  [ServiceAnnotations]
  *  service ServiceName {
@@ -35,6 +35,7 @@ import java.util.List;
  *      ResourceDefinition;+
  *  }
  */
+@SuppressWarnings("unused")
 public class Service {
 
     private List<Annotation> annotations;

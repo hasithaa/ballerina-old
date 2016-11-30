@@ -1,6 +1,5 @@
 grammar Ballerina;
 
-//todo xml, json schema definition
 //todo comment statment
 //todo revisit blockStatement
 
@@ -226,15 +225,14 @@ lastFormalParameter
     :   variableModifier* typeType '...' variableDeclaratorId
     ;
 
-//todo add schemaDefinition part
 buildInDataType
-    :   'xml' //schemaDefinition?
+    :   'xml' (schemaDefinition)?
     |   'xmlDocument'
-    |   'json' //schemaDefinition?
+    |   'json'(schemaDefinition)?
     ;
-// todo define schem definition
-//schemaDefinition
-//    :   '<' '>';
+
+schemaDefinition
+    :   '<' ('{' literal '}')? Identifier '>';
 
 //todo revisit and remove
 //typeArguments

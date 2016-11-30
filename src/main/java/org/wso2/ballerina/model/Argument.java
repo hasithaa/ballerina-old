@@ -18,42 +18,46 @@
 
 package org.wso2.ballerina.model;
 
+import org.wso2.ballerina.model.types.Type;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * This class represent an Argument which can be a part of Function, Resource and Action definition
  */
+@SuppressWarnings("unused")
 public class Argument {
 
-    private String name, value;
+    private Type type;
+    private String name;
     private List<Annotation> annotations;
 
     /**
+     * @param type Type of the Argument
      * @param name  Name of the Argument
-     * @param value Value of the Argument
      */
-    public Argument(String name, String value) {
+    public Argument(Type type, String name) {
+        this.type = type;
         this.name = name;
-        this.value = value;
     }
 
     /**
-     * Get name of the Argument
+     * Get connectorName of the Argument
      *
-     * @return name of the Argument
+     * @return connectorName of the Argument
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Get the value of the Argument
+     * Get the type of the Argument
      *
-     * @return value of the Argument
+     * @return type of the Argument
      */
-    public String getValue() {
-        return value;
+    public Type getType() {
+        return type;
     }
 
     /**

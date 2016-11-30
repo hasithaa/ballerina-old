@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A resource is a single request handler within a service.
+ * A Resource is a single request handler within a Service.
  * The resource concept is designed to be access protocol independent.
  * But in the initial release of the language it is intended to work with HTTP.
  * <p>
@@ -40,6 +40,7 @@ import java.util.List;
  *  }*
  *
  */
+@SuppressWarnings("unused")
 public class Resource {
 
     private List<Annotation> annotations;

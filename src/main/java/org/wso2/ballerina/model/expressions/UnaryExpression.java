@@ -15,15 +15,23 @@
 *  specific language governing permissions and limitations
 *  under the License.
 */
-package org.wso2.ballerina.model.statements;
+package org.wso2.ballerina.model.expressions;
+
+import org.wso2.ballerina.model.Operator;
 
 /**
- * Represents a single line comment. //-style
+ * {@code UnaryExpression} represents a unary expression
+ *
+ * @since 1.0.0
  */
-public class CommentStmt implements Statement {
-    private String comment;
+public class UnaryExpression implements Expression {
 
-    public CommentStmt(String comment) {
-        this.comment = comment;
+    private Operator op;
+    private Expression expr;
+
+    public UnaryExpression(Operator op, Expression expr) {
+        this.op = op;
+        this.expr = expr;
     }
+
 }

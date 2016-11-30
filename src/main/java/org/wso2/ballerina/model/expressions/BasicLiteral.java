@@ -15,7 +15,12 @@
 *  specific language governing permissions and limitations
 *  under the License.
 */
-package org.wso2.ballerina.model.expression;
+package org.wso2.ballerina.model.expressions;
 
-public interface Expression {
+/**
+ *  {@code BasicLiteral} represents a literal of the basic type
+ *
+ *  @since 1.0.0
+ */
+public class BasicLiteral implements Expression {
 }
